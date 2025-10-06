@@ -1,6 +1,7 @@
 import { Search, ShoppingCart, User, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import MegaMenu from "@/components/MegaMenu";
 
 const Header = () => {
   return (
@@ -16,14 +17,15 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#intro" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <nav className="hidden md:flex items-center">
+            <MegaMenu />
+            <a href="#intro" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
               Intro
             </a>
-            <a href="#record" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a href="#record" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
               Record
             </a>
-            <a href="#gadgets" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a href="#gadgets" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
               Gadgets
             </a>
           </nav>
