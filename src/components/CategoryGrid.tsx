@@ -1,47 +1,59 @@
 import { 
-  Smartphone, 
-  Headphones, 
   Laptop, 
-  Watch, 
-  Camera, 
+  ShoppingBag, 
+  Tv, 
+  Headphones, 
+  Monitor, 
   Gamepad2,
-  Tv,
-  Speaker,
-  Monitor
+  Dumbbell,
+  Heart,
+  Truck,
+  Book,
+  Home,
+  Camera,
+  Clipboard,
+  Eye,
+  Smartphone
 } from "lucide-react";
 
 const categories = [
+  { name: "Computers", icon: Laptop, color: "hsl(221 83% 53%)" },
+  { name: "Fashion", icon: ShoppingBag, color: "hsl(221 83% 53%)" },
+  { name: "Electronics", icon: Tv, color: "hsl(221 83% 53%)" },
+  { name: "Gaming", icon: Gamepad2, color: "hsl(221 83% 53%)" },
+  { name: "TV/Projectors", icon: Monitor, color: "hsl(221 83% 53%)" },
+  { name: "Toys", icon: Dumbbell, color: "hsl(221 83% 53%)" },
+  { name: "Sport", icon: Dumbbell, color: "hsl(221 83% 53%)" },
+  { name: "Health", icon: Heart, color: "hsl(221 83% 53%)" },
+  { name: "Auto", icon: Truck, color: "hsl(221 83% 53%)" },
+  { name: "Books", icon: Book, color: "hsl(221 83% 53%)" },
+  { name: "Home", icon: Home, color: "hsl(221 83% 53%)" },
+  { name: "Photo/Video", icon: Camera, color: "hsl(221 83% 53%)" },
+  { name: "Collectibles", icon: Clipboard, color: "hsl(221 83% 53%)" },
+  { name: "Beauty", icon: Eye, color: "hsl(221 83% 53%)" },
+  { name: "Audio", icon: Headphones, color: "hsl(221 83% 53%)" },
   { name: "Phones", icon: Smartphone, color: "hsl(221 83% 53%)" },
-  { name: "Audio", icon: Headphones, color: "hsl(280 60% 55%)" },
-  { name: "Laptop", icon: Laptop, color: "hsl(200 80% 55%)" },
-  { name: "Watch", icon: Watch, color: "hsl(160 60% 50%)" },
-  { name: "Camera", icon: Camera, color: "hsl(340 60% 55%)" },
-  { name: "Gaming", icon: Gamepad2, color: "hsl(45 90% 55%)" },
-  { name: "TV", icon: Tv, color: "hsl(260 60% 55%)" },
-  { name: "Speakers", icon: Speaker, color: "hsl(180 60% 50%)" },
-  { name: "Display", icon: Monitor, color: "hsl(300 60% 55%)" },
 ];
 
 const CategoryGrid = () => {
   return (
-    <section className="py-12">
+    <section className="py-8 bg-background">
       <div className="container px-4">
         <h2 className="text-2xl font-bold mb-6">Top categories</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 max-w-6xl">
           {categories.map((category) => {
             const Icon = category.icon;
             return (
               <button
                 key={category.name}
-                className="flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-muted transition-colors group"
+                className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-muted transition-colors group"
               >
                 <div 
-                  className="w-16 h-16 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
-                  style={{ backgroundColor: `${category.color}15` }}
+                  className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/10 transition-transform group-hover:scale-110"
                 >
-                  <Icon className="w-7 h-7" style={{ color: category.color }} />
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
-                <span className="text-sm font-medium text-center">{category.name}</span>
+                <span className="text-xs font-medium text-center text-foreground">{category.name}</span>
               </button>
             );
           })}

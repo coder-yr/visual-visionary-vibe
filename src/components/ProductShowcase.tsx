@@ -56,10 +56,10 @@ const products: Product[] = [
 
 const ProductShowcase = () => {
   return (
-    <section className="py-12 bg-muted/30">
+    <section className="py-8 bg-background">
       <div className="container px-4">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold">Trending Non-Duch Favorite</h2>
+          <h2 className="text-2xl font-bold">Trending New Deals Everyday</h2>
           <div className="flex gap-2">
             <Button variant="outline" size="icon">
               <ChevronLeft className="h-4 w-4" />
